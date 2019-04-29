@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  fontSizePx = 12;
   title = 'Tour of Heroes';
+
+  sizeChanger(event?: Event) {
+    console.log('event', event);
+    console.log('fontSizePx', this.fontSizePx);
+  }
 }

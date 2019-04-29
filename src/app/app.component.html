@@ -1,7 +1,8 @@
 <h1>{{ title }}</h1>
 <nav>
-  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/dashboard">Dashboard</a>&nbsp;&nbsp;
   <a routerLink="/heroes">Heroes</a>
 </nav>
 <router-outlet></router-outlet>
-<toh-messages></toh-messages>
+<toh-sizer [size]="fontSizePx" (sizeChange)="fontSizePx = $event"></toh-sizer>
+<div [style.font-size.px]="fontSizePx"><toh-messages></toh-messages></div>
